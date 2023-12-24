@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <script src="https://kit.fontawesome.com/41cb8446c6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/index.css">
+  </head>
+  <body>
+    <div class="register-popUp">
+      <div class="web-left">
+          <header>
+              <h1>Namaste!</h1>
+              <div>Please create an account to start your journey</div>
+          </header>
+
+          <form action="/register" method="post" class="register">
+              <input name="name" type="text" placeholder="Name" required>
+              <input name="username" type="text" placeholder="Username" required>
+              <input name="profession" type="text" placeholder="Profession" required>
+              <input name="password" type="password" placeholder=" Set Password" required>
+              <button type="submit" name="submit">Register</button>
+          </form>
+          <div class="join-with-sns">
+              <div>Or join us with social networks</div>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-google"></i></a>
+          </div>
+          <div class="log-in">Already have an account?
+              <a href="/mlogin" id="log-in">Log In</a></div>
+      </div>
+      <div class="web-right">
+          <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcvLjcY%2FbtqIROc60YY%2Fajj5WK2IMkzF5PDk59RNC1%2Fimg.jpg" alt="yoga">
+      </div>
+  </div>
+  </body>
+</html>

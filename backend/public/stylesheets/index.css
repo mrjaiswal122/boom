@@ -1,0 +1,138 @@
+:root {
+    --color-background: #F9EEEC;
+    --color-point: #813b5e;
+    --color-extra: #d3aaa2;
+    --white: rgb(252, 250, 250);
+    --black: rgb(49, 49, 49);
+
+    --padding-small: 0.5em;
+    --padding-medium: 1em;
+
+    --font-small: 0.75rem;
+}
+
+ * {
+    margin: 0;
+    padding: 0;
+ }
+
+ body {
+    background: var(--color-background);
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    justify-content: center;
+ }
+
+ .register-popUp {
+    margin: 4em;
+    max-width: 64em;
+    display: flex;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+        0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07),
+        0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07),
+        0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    min-width: 326px;
+    border-radius: 0 16px 16px 0;
+    flex-grow: 2;
+ }
+
+ .web-left {
+    padding: 6em 8em;
+    color: var(--black);
+    font-size: var(--font-small);
+    flex-grow: 3
+}
+
+h1 {
+    color: var(--color-point);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+a {
+    color: var(--color-point);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--padding-medium);
+}
+
+input {
+    width: 100%;
+    height: 36px;
+    border-radius: 8px;
+    border: solid 1.8px var(--color-extra);
+    margin-top: var(--padding-small);
+}
+
+::placeholder {
+    color: var(--color-extra);
+    padding-left: var(--padding-small);
+    font-size: var(--font-small);
+}
+
+button {
+    background: var(--color-point);
+    color: var(--white);
+    width: 101%;
+    height: 36px;
+    border-radius: 8px;
+    border: solid 1.8px var(--color-point);
+    margin-top: var(--padding-small);
+}
+
+.join-with-sns {
+    margin-top: var(--padding-medium);
+}
+
+.join-with-sns .fab {
+    margin: var(--padding-medium) var(--padding-small);
+}
+
+.log-in {
+    margin-top: var(--padding-small);
+}
+
+
+@media screen and (max-width: 44em) {
+    img {
+        display: none;
+    }
+
+
+    body::before {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(./images/id.png);
+        background-size: cover;
+        filter: blur(2px);
+        z-index: -1;
+        content: "";
+    }
+  
+      .register-popUp {
+        margin: 2em;
+    }
+  
+     .web-left {
+        padding: 4em;
+    }
+
+}
