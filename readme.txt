@@ -3,3 +3,4 @@ in package.json(if Nodemon is locally installed as project dependencies then use
  Note -- while usings paths (.) indicates the same directory
    example--  ./boom/backend/app.js=----boom>boom>backend>app.js
      while     /boom/backend/app.js=----boom>backend>app.js   
+     kjfg
