@@ -1,6 +1,6 @@
 var express=require("express");
 var app=express.Router();
-
+var upload=require("./multer_setup");
 const userModel=require("./user");
 // const model2=userModel.model2();
 
@@ -9,6 +9,24 @@ const localStrategy=require('passport-local');
 passport.use(new localStrategy(userModel.authenticate()));
 
 app.get("/",function(req,res){
+
+    res.render("home");
+    
+    }); 
+
+
+app.post("/upload",upload.single('image'),function(req,res,next){
+        if(!req.file){
+          return res.status(400).send("No file were uploaded");
+        }
+       
+     console.log(req.file);
+     res.send("uploaded successfully");
+        next(); 
+     });
+
+
+app.get("/login_new_user",function(req,res){
     // app.setHeader('Content-Type','text/html');
     // res.write("hi ankush go on!!!!!");
     res.render("index");
