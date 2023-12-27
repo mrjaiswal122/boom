@@ -10,7 +10,7 @@ passport.use(new localStrategy(userModel.authenticate()));
 
 app.get("/",function(req,res){
 
-    res.render("home");
+    res.render("base");
     
     }); 
 

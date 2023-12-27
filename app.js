@@ -12,6 +12,7 @@ var app = express();
 // engine setup
 app.set("views", path.join(__dirname, "obviously"));
 app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname,'public')));
 
 
 //this is used to log all the data available while communicating with server like-"GET /users 200 5.231 ms - 45" means -This indicates that a GET request was made to the "/users" endpoint, returned a 200 status code, took 5.231 milliseconds to process, and sent a response of 45 bytes. 
@@ -39,7 +40,6 @@ app.use(express.urlencoded({ extended: false }));
 //setting up cookie-parser
 app.use(cookie());
 //setting up static file in public
-app.use(express.static(path.join(__dirname,'public')));
 // setting -routes
 app.use("/", index);
 // app.use("/profile",profile);
